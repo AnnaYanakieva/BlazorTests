@@ -55,27 +55,27 @@ namespace BlazorTests.Components.Grid
             Assert.IsTrue(isForecastDeleted);
         }
 
-        public void VerifyThatForecastIsUpdated(string expectedTemperature, string expectedSummary)
-        {
-            string actualTemperature;
-            string actualSummary;
+        //public void VerifyThatForecastIsUpdated(string expectedTemperature, string expectedSummary)
+        //{
+        //    string actualTemperature;
+        //    string actualSummary;
 
-            while (true)
-            {
-                try
-                {
-                    actualTemperature = FirstRowTemp.Text;
-                    actualSummary = FirstRowSummary.Text;
-                    break;
-                }
-                catch (StaleElementReferenceException)
-                {
-                    continue;
-                }
-            }
-            Assert.AreEqual(expectedTemperature, actualTemperature);
-            Assert.AreEqual(expectedSummary, actualSummary);
-        }
+        //    while (true)
+        //    {
+        //        try
+        //        {
+        //            actualTemperature = FirstRowTemp.Text;
+        //            actualSummary = FirstRowSummary.Text;
+        //            break;
+        //        }
+        //        catch (StaleElementReferenceException)
+        //        {
+        //            continue;
+        //        }
+        //    }
+        //    Assert.AreEqual(expectedTemperature, actualTemperature);
+        //    Assert.AreEqual(expectedSummary, actualSummary);
+        //}
 
         public void VerifyForecastIsFilteredById(int expectedNumberOfRows, string expectedRowId)
         {
