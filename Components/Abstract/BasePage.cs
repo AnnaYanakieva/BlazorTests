@@ -39,7 +39,6 @@ namespace BlazorTests.Components.Abstract
 
         public abstract string Url { get; }
         protected IWebDriver Driver { get; }
-
         protected IJavaScriptExecutor Js { get; }
         protected Actions Actions { get; }
     }

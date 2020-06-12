@@ -54,33 +54,10 @@ namespace BlazorTests.Components.Grid
             }
             Assert.IsTrue(isForecastDeleted);
         }
-
-        //public void VerifyThatForecastIsUpdated(string expectedTemperature, string expectedSummary)
-        //{
-        //    string actualTemperature;
-        //    string actualSummary;
-
-        //    while (true)
-        //    {
-        //        try
-        //        {
-        //            actualTemperature = FirstRowTemp.Text;
-        //            actualSummary = FirstRowSummary.Text;
-        //            break;
-        //        }
-        //        catch (StaleElementReferenceException)
-        //        {
-        //            continue;
-        //        }
-        //    }
-        //    Assert.AreEqual(expectedTemperature, actualTemperature);
-        //    Assert.AreEqual(expectedSummary, actualSummary);
-        //}
-
         public void VerifyForecastIsFilteredById(int expectedNumberOfRows, string expectedRowId)
         {
             WaitUntilAttributeContainsValue(By.XPath("//span[text()='Id']//following-sibling::div"), "background-color", "rgba(0, 123, 255, 1)");
-            
+
             var actualTableRows = TableRows.Count;
             var actualRowId = FirstRowId.Text;
 
@@ -108,7 +85,7 @@ namespace BlazorTests.Components.Grid
                         else
                         {
                             break;
-                        }                       
+                        }
                     }
                     break;
                 }
