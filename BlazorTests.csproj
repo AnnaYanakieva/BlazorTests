@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="log4net" Version="2.0.8" />
+    <PackageReference Include="nunit" Version="3.12.0" />
+    <PackageReference Include="NUnit3TestAdapter" Version="3.16.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.4.0" />
+    <PackageReference Include="Selenium.Chrome.WebDriver" Version="83.0.0" />
+    <PackageReference Include="Selenium.Support" Version="3.141.0" />
+    <PackageReference Include="Selenium.WebDriver" Version="3.141.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="ArtOfTest.WebAii">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Progress\Test Studio\Bin\ArtOfTest.WebAii.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Blazor">
+      <HintPath>..\..\..\.nuget\packages\telerik.ui.for.blazor.trial\2.14.1\lib\netstandard2.1\Telerik.Blazor.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.TestingFramework.Controls.TelerikUI.Blazor">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Progress\Test Studio\Bin\Translators\Telerik.TestingFramework.Controls.TelerikUI.Blazor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
